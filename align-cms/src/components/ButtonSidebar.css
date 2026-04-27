@@ -1,0 +1,74 @@
+.sidebar_btn_cont {
+    display: flex;
+    height: 40px; 
+    padding-left: 12px;
+    padding-right: 12px;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 18px; 
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease-in-out;
+}
+
+.sidebar_btn_cont:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.sidebar_btn_active,
+.sidebar_btn_active:hover {
+    background-color: rgba(157, 220, 187, 0.10);
+    color: #9DDCBB;
+}
+
+.sidebar_btn_cont:active {
+    transform: scale(0.97);
+}
+
+.sidebar_btn_icon_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar_btn_icon {
+    width: 20px; 
+    height: 20px;
+    flex-shrink: 0;
+    transition: stroke 0.2s ease, color 0.2s ease;
+}
+
+.sidebar_btn_text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.sidebar_btn_collapsed {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    width: 40px; 
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar_btn_cont {
+        height: 48px;
+        border-radius: 14px; 
+    }
+
+    .sidebar_btn_text {
+        font-size: 16px; 
+    }
+}

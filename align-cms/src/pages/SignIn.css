@@ -1,0 +1,444 @@
+.sign_container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--secondaryfontfamily);
+  background-color: var(--backgroundwhite);
+}
+
+.sign_leftcolumn {
+  flex: 1;
+  background-color: var(--primarycolordark);
+  color: var(--backgroundwhite);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sign_rightcolumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #F8F9FA; /* Subtle off-white for contrast */
+}
+
+/* Left Column Typography & Elements */
+.sign_logo {
+  font-family: var(--primaryfontfamily);
+  font-size: var(--fontsize_bodylarge);
+  font-weight: 700;
+  color: var(--primarycolorbluegreen);
+  letter-spacing: 0.5px;
+}
+
+.sign_heading {
+  font-size: var(--fontsize_sectionheading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.sign_subheading {
+  font-size: var(--fontsize_body);
+  color: #A0B0B9;
+  margin-bottom: 50px;
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+/* Features List */
+.sign_features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sign_featureitem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: transform 0.2s ease;
+}
+
+.sign_featureitem:hover {
+  transform: translateX(5px);
+}
+
+.sign_featureicon {
+  color: var(--primarycolorbluegreen);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.sign_featuretitle {
+  display: block;
+  font-weight: 600;
+  font-size: var(--fontsize_bodysmall);
+  margin-bottom: 4px;
+}
+
+.sign_featuredesc {
+  margin: 0;
+  font-size: var(--fontsize_caption);
+  color: #A0B0B9;
+  line-height: 1.5;
+}
+
+/* Protected Box */
+.sign_protectedbox {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.sign_protectedicon {
+  color: var(--primarycolorbluegreen);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.sign_protectedtitle {
+  display: block;
+  font-weight: 600;
+  font-size: var(--fontsize_bodysmall);
+  margin-bottom: 8px;
+}
+
+.sign_protecteddesc {
+  margin: 0;
+  font-size: var(--fontsize_micro);
+  color: #A0B0B9;
+  line-height: 1.6;
+}
+
+.sign_footertext, .sign_rightfooter {
+  font-size: var(--fontsize_micro);
+  color: #A0B0B9;
+}
+
+/* Right Column - Form Card */
+.sign_formcard {
+  background-color: var(--backgroundwhite);
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 30px;
+}
+
+.sign_cardheading {
+  font-size: var(--fontsize_sectionsubheading);
+  font-weight: 700;
+  color: var(--primarycolordark);
+  margin: 0 0 8px 0;
+}
+
+.sign_cardsubheading {
+  font-size: var(--fontsize_caption);
+  color: #6C7A87;
+  margin: 0 0 32px 0;
+}
+
+/* Form Elements */
+.sign_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sign_inputgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sign_label {
+  font-size: var(--fontsize_caption);
+  font-weight: 600;
+  color: var(--primarycolordark);
+}
+
+.sign_inputwrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sign_inputicon {
+  position: absolute;
+  color: #A0B0B9;
+  width: 18px;
+  height: 18px;
+  transition: color 0.2s ease;
+}
+
+.sign_inputiconleft {
+  left: 16px;
+}
+
+.sign_input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: var(--fontsize_bodysmall);
+  color: var(--primarycolordark);
+  transition: all 0.3s ease;
+  background-color: #FAFAFA;
+}
+
+.sign_inputhaslefticon {
+  padding-left: 44px;
+}
+
+.sign_inputhasrighticon {
+  padding-right: 44px;
+}
+
+.sign_input:focus {
+  outline: none;
+  border-color: var(--primarycolorlight);
+  background-color: var(--backgroundwhite);
+  box-shadow: 0 0 0 3px rgba(18, 69, 89, 0.1);
+}
+
+.sign_input:focus + .sign_inputiconleft,
+.sign_inputwrapper:focus-within .sign_inputicon {
+  color: var(--primarycolorlight);
+}
+
+.sign_passwordtoggle {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign_toggleicon {
+  color: #A0B0B9;
+  width: 18px;
+  height: 18px;
+  transition: color 0.2s ease;
+}
+
+.sign_passwordtoggle:hover .sign_toggleicon {
+  color: var(--primarycolordark);
+}
+
+/* Options & Buttons */
+.sign_options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.sign_checkboxwrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.sign_checkbox {
+  accent-color: var(--primarycolorlight);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.sign_checkboxtext {
+  font-size: var(--fontsize_caption);
+  color: #6C7A87;
+  user-select: none;
+}
+
+.sign_forgotlink, .sign_supportlink {
+  font-size: var(--fontsize_caption);
+  color: var(--primarycolorlight);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.sign_forgotlink:hover, .sign_supportlink:hover {
+  color: var(--primarycolordark);
+  text-decoration: underline;
+}
+
+.sign_signinbtn {
+  background-color: var(--primarycolordark);
+  color: var(--backgroundwhite);
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: var(--fontsize_bodysmall);
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.sign_signinbtn:hover {
+  background-color: var(--primarycolorlight);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(1, 29, 39, 0.2);
+}
+
+.sign_signinbtn:active {
+  transform: translateY(0);
+}
+
+.sign_signinbtn:disabled {
+  background-color: #A0B0B9;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Divider & Google Button */
+.sign_divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.sign_divider::before,
+.sign_divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.sign_dividertext {
+  padding: 0 16px;
+  color: #A0B0B9;
+  font-size: var(--fontsize_micro);
+  font-weight: 600;
+}
+
+.sign_googlebtn {
+  width: 100%;
+  background-color: var(--backgroundwhite);
+  color: var(--primarycolordark);
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: var(--fontsize_bodysmall);
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.sign_googlebtn:hover {
+  background-color: #F8F9FA;
+  border-color: #CBD5E1;
+}
+
+.sign_googleicon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Demo Credentials */
+.sign_democredentials {
+  margin-top: 32px;
+  padding: 16px;
+  background-color: var(--backgroundmint);
+  border-radius: 8px;
+  border: 1px dashed var(--primarycolorbluegreen);
+}
+
+.sign_demotitle {
+  font-size: var(--fontsize_caption);
+  color: var(--primarycolordark);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.sign_demoitem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: var(--fontsize_caption);
+}
+
+.sign_demoitem:last-child {
+  margin-bottom: 0;
+}
+
+.sign_demolabel {
+  color: #6C7A87;
+}
+
+.sign_demovalue {
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--primarycolordark);
+}
+
+.sign_errormessage {
+  color: #EF4444;
+  font-size: var(--fontsize_caption);
+  margin: 0;
+  background-color: #FEF2F2;
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 3px solid #EF4444;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .sign_container {
+    flex-direction: column;
+  }
+  
+  .sign_leftcolumn {
+    padding: 40px 24px;
+  }
+  
+  .sign_rightcolumn {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sign_formcard {
+    padding: 32px 24px;
+  }
+  
+  .sign_heading {
+    font-size: var(--fontsize_sectionsubheading);
+  }
+}
