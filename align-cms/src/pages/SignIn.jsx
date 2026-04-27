@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import './Sign.css';
+import { useNavigate } from 'react-router-dom'; // <-- 1. Import useNavigate
+import './SignIn.css';
 import { Globe, Users, ShieldCheck, Lock, Mail, Eye, EyeOff, Building2 } from 'lucide-react';
 
 const SignIn = () => {
+  const navigate = useNavigate(); // <-- 2. Initialize the hook
+
   const [email, setEmail] = useState('admin@align.com');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -20,13 +23,13 @@ const SignIn = () => {
     setIsLoading(true);
 
     try {
-      // Supabase Email Sign-In Implementation
-      // const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-      // if (error) throw error;
-      
       console.log('Signing in...', { email, password });
-      // Simulate network request
+      
+      // Simulate network request delay
       await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // <-- 3. Navigate to dashboard after successful "login"
+      navigate('/dashboard'); 
       
     } catch (err) {
       setError(err.message || 'Invalid email or password. Please try again.');
@@ -37,14 +40,9 @@ const SignIn = () => {
 
   const handleGoogleSignIn = async () => {
     try {
-      // Supabase Google OAuth Implementation
-      // const { data, error } = await supabase.auth.signInWithOAuth({
-      //   provider: 'google',
-      //   options: { redirectTo: window.location.origin }
-      // });
-      // if (error) throw error;
-      
       console.log('Redirecting to Google...');
+      // If you want Google sign in to also navigate, add it here:
+      // navigate('/dashboard');
     } catch (err) {
       setError('Error connecting to Google.');
     }

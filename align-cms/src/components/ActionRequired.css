@@ -1,0 +1,123 @@
+/* ActionRequired.css */
+.actionreq_section {
+  margin-bottom: 32px;
+  animation: actionreq_fade_in 0.4s ease-out forwards;
+}
+
+.actionreq_heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.actionreq_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionreq_card {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.actionreq_card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.actionreq_theme_blue {
+  background-color: #F0F9FF;
+  border-color: #E0F2FE;
+}
+.actionreq_theme_blue .actionreq_icon { color: #0284C7; }
+.actionreq_theme_blue .actionreq_iconwrap { background-color: #ffffff; }
+
+.actionreq_theme_red {
+  background-color: #FEF2F2;
+  border-color: #FEE2E2;
+}
+.actionreq_theme_red .actionreq_icon { color: #DC2626; }
+.actionreq_theme_red .actionreq_iconwrap { background-color: #ffffff; }
+
+.actionreq_theme_yellow {
+  background-color: #FFFBEB;
+  border-color: #FEF3C7;
+}
+.actionreq_theme_yellow .actionreq_icon { color: #D97706; }
+.actionreq_theme_yellow .actionreq_iconwrap { background-color: #ffffff; }
+
+.actionreq_iconwrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.actionreq_content {
+  flex: 1;
+}
+
+.actionreq_title {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.actionreq_desc {
+  margin: 0;
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.actionreq_btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionreq_btn:hover {
+  background-color: #F9FAFB;
+  border-color: #D1D5DB;
+  color: #111827;
+}
+
+.actionreq_btn:active {
+  transform: scale(0.96);
+}
+
+@keyframes actionreq_fade_in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 640px) {
+  .actionreq_card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+  }
+  .actionreq_btn {
+    align-self: flex-start;
+  }
+}

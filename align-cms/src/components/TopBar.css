@@ -1,0 +1,135 @@
+/* Topbar.css */
+.topbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #E5E7EB;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topbar_searchwrapper {
+  display: flex;
+  align-items: center;
+  background-color: #F3F4F6;
+  border-radius: 20px;
+  padding: 8px 16px;
+  width: 320px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topbar_searchwrapper:focus_within {
+  background-color: #ffffff;
+  border-color: #9DDCBB;
+  box-shadow: 0 0 0 3px rgba(157, 220, 187, 0.2);
+}
+
+.topbar_searchicon {
+  color: #9CA3AF;
+  margin-right: 8px;
+}
+
+.topbar_searchinput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  color: #111827;
+}
+
+.topbar_searchinput::placeholder {
+  color: #9CA3AF;
+}
+
+.topbar_actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.topbar_bellbtn {
+  background: transparent;
+  border: none;
+  color: #4B5563;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.topbar_bellbtn:hover {
+  color: #111827;
+  transform: scale(1.1);
+}
+
+.topbar_notificationdot {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #EF4444;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.topbar_profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.topbar_profile:hover {
+  background-color: #F3F4F6;
+}
+
+.topbar_avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #1A3A46;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.topbar_userinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar_username {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.topbar_useremail {
+  margin: 0;
+  font-size: 12px;
+  color: #6B7280;
+}
+
+@media screen and (max-width: 640px) {
+  .topbar_userinfo {
+    display: none;
+  }
+  .topbar_searchwrapper {
+    width: 200px;
+  }
+  .topbar_container {
+    padding: 16px;
+  }
+}

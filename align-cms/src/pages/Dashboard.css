@@ -1,0 +1,83 @@
+/* Dashboard.css */
+.dashboard_layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #F9FAFB;
+  font-family: var(--secondaryfontfamily, 'DM Sans', -apple-system, sans-serif);
+}
+
+.dashboard_main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dashboard_scrollarea {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 32px;
+}
+
+.dashboard_content {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard_pageheader {
+  margin-bottom: 32px;
+  animation: dashboard_fade_down 0.4s ease-out forwards;
+}
+
+.dashboard_pagetitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+}
+
+.dashboard_pagesubtitle {
+  font-size: 15px;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* Two Column Layout for Insights and Recent Activity */
+.dashboard_twocolumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@keyframes dashboard_fade_down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dashboard_scrollarea::-webkit-scrollbar { width: 6px; }
+.dashboard_scrollarea::-webkit-scrollbar-track { background: transparent; }
+.dashboard_scrollarea::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .dashboard_twocolumn {
+    grid-template-columns: 1fr; /* Stacks to single column on tablet/mobile */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard_scrollarea {
+    padding: 20px;
+  }
+  .dashboard_pagetitle {
+    font-size: 28px;
+  }
+}

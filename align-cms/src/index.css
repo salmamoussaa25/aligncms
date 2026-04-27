@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+  --primarycolordark: #011D27;
+  --primarycolorlight: #124559;
+  --primarycolorbluegreen: #9DDCBB; 
+  --secondarycoloryellow: #FFC828;
+  --secondarycolororange: #FF8D57; 
+  --secondarycolorindigo: #6478B9;
+  --secondarycolorlilac: #9086D0;
+  --primarymediumteal: #133c4a; 
+  --secondarysageteal: #508488;
+  --secondarymediummint: #7fb9a2;
+  --backgroundmint: #c9ffe3;
+  --backgroundwhite: #ffffff;
+  --backgroundmint: #f8fffe;
+  --primaryfontfamily: 'IBM Plex Sans Devanagari', sans-serif;
+  --secondaryfontfamily: 'DM Sans', sans-serif;
+  --fontsize_heroheading: 72px;
+  --fontsize_herosubheading: 60px;
+  --fontsize_sectionheading: 48px;
+  --fontsize_sectionsubheading: 36px;
+  --fontsize_bodylarge: 24px;
+  --fontsize_body: 20px;
+  --fontsize_bodysmall: 16px;
+  --fontsize_caption: 14px;
+  --fontsize_micro: 12px;
+}

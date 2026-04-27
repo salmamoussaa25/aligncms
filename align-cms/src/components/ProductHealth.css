@@ -1,0 +1,166 @@
+
+.producthealth_section {
+  margin-bottom: 32px;
+  animation: producthealth_fade_in 0.4s ease-out forwards;
+}
+
+.producthealth_heading {
+  font-family: var(--secondaryfontfamily, 'DM Sans', sans-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.producthealth_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.producthealth_card {
+  background-color: var(--backgroundwhite, #ffffff);
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producthealth_card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.producthealth_cardheader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.producthealth_icon { color: #6B7280; }
+.producthealth_icon_green { color: #10B981; }
+.producthealth_icon_orange { color: #F59E0B; }
+.producthealth_icon_purple { color: #8B5CF6; }
+
+.producthealth_cardtitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.producthealth_mainstat {
+  font-size: 32px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 16px 0;
+  line-height: 1;
+}
+
+.producthealth_barwrap {
+  margin-bottom: 12px;
+}
+
+.producthealth_barwrap:last-child {
+  margin-bottom: 0;
+}
+
+.producthealth_barlabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  color: #4B5563;
+  margin-bottom: 6px;
+}
+
+.producthealth_bartrack {
+  height: 6px;
+  background-color: #F3F4F6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.producthealth_barfill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-out;
+}
+
+.producthealth_fill_green { background-color: #10B981; }
+.producthealth_fill_orange { background-color: #F59E0B; }
+
+.producthealth_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.producthealth_listitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.producthealth_badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.producthealth_badge_green { background-color: #D1FAE5; color: #065F46; }
+.producthealth_badge_blue { background-color: #DBEAFE; color: #1E40AF; }
+.producthealth_badge_gray { background-color: #F3F4F6; color: #374151; }
+.producthealth_badge_red { background-color: #FEE2E2; color: #991B1B; }
+
+.producthealth_actionbtn {
+  margin-top: auto;
+  width: 100%;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.producthealth_actionbtn:hover {
+  background-color: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+.producthealth_subtext {
+  font-size: 13px;
+  color: #6B7280;
+  margin: -8px 0 16px 0;
+}
+
+.producthealth_statuswrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #10B981;
+}
+
+.producthealth_statustext {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@keyframes producthealth_fade_in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

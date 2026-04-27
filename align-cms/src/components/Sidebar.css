@@ -1,0 +1,111 @@
+/* Sidebar.css */
+.sidebar_wrapper {
+  width: 260px;
+  background-color: #011D27;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex-shrink: 0;
+  transition: width 0.3s ease;
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar_collapsed {
+  width: 80px;
+}
+
+.sidebar_header {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar_logo {
+  font-size: 20px;
+  font-weight: 500;
+  color: #9DDCBB;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar_logo_bold {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.sidebar_collapse_btn {
+  position: absolute;
+  right: -12px;
+  top: 28px;
+  background-color: #122B34;
+  color: #ffffff;
+  border: 1px solid #011D27;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.sidebar_collapse_btn:hover {
+  transform: scale(1.1);
+  background-color: #1A3A46;
+}
+
+.sidebar_nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.sidebar_navlink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.sidebar_navlink:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.sidebar_navlink:active {
+  transform: scale(0.98);
+}
+
+.sidebar_navlink_active {
+  background-color: rgba(157, 220, 187, 0.10);
+  color: #9DDCBB;
+}
+
+.sidebar_navlink_active:hover {
+  background-color: rgba(157, 220, 187, 0.15);
+  color: #9DDCBB;
+}
+
+.sidebar_navicon {
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar_wrapper {
+    position: fixed;
+    z-index: 100;
+    transform: translateX(-100%);
+  }
+}

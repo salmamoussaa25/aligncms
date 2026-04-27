@@ -1,0 +1,90 @@
+.systemupdates_section {
+  margin-top: 32px;
+  margin-bottom: 40px;
+  animation: systemupdates_fade_in 0.4s ease-out forwards;
+}
+
+.systemupdates_heading {
+  font-family: var(--secondaryfontfamily, 'DM Sans', sans-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.systemupdates_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.systemupdates_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 30px;
+  padding: 12px 24px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.systemupdates_card:hover {
+  background-color: #F1F5F9;
+  transform: translateX(4px);
+}
+
+.systemupdates_content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.systemupdates_iconwrap {
+  color: #3B82F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.systemupdates_text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.systemupdates_btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: #3B82F6;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.systemupdates_btn:hover {
+  background-color: #E0F2FE;
+}
+
+@media screen and (max-width: 640px) {
+  .systemupdates_card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 16px;
+  }
+  .systemupdates_btn {
+    align-self: flex-end;
+  }
+}
+
+@keyframes systemupdates_fade_in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

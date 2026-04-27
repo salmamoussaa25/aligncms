@@ -5,15 +5,12 @@ import SignIn from './pages/SignIn';
 
 const RoutingApp = () => {
     return ( 
-        <>
-         <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<SignIn />} />
-            
-
-        </Routes>
-    </BrowserRouter>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<SignIn />} />
+                <Route path='/dashboard' element={<Dashboard />} />
+            </Routes>
+        </BrowserRouter>
      );
 }
  
